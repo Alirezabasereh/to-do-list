@@ -1,0 +1,428 @@
+
+        @font-face {
+            font-family: myfont;
+            src: url(assets/font/6.ttf);
+        }
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: myfont;
+            background-color: rgb(199, 177, 255);
+            transition: 0.4s;
+        }
+
+        .container {
+            width: 1200px;
+            height: 700px;
+            border: 6px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+        }
+
+
+        .container>div:nth-of-type(1) {
+            width: 25%;
+            height: 100%;
+            background-color: white;
+            padding: 10px;
+        }
+
+
+        .container>div:nth-of-type(1)>div:nth-of-type(1) {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            padding: 5px;
+        }
+
+        .container>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1) {
+            width: 26%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background-image: url(assets/img/profile.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2) {
+            width: 70%;
+            height: 100%;
+            margin-left: 10px;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        /* .container>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>h2{
+            text-transform: capitalize;
+            font-weight: 400;
+            margin-bottom: 10px;
+        } */
+
+        .container>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(2)>span {
+            text-transform: capitalize;
+        }
+
+
+        .line {
+            width: 70%;
+            height: 4px;
+            background-color: rgb(195, 194, 194);
+            margin: 0px auto;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+
+
+        .todaytasks {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 50px;
+            text-transform: capitalize;
+            color: rgb(121, 121, 121);
+        }
+
+
+
+
+
+        .todaytasks>div:nth-of-type(1) {
+            margin-left: 10px;
+        }
+
+        .todaytasks>div:nth-of-type(2) {
+            margin-left: 60px;
+        }
+
+        .filters {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .filters>div {
+            margin: 10px 0px;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .filters>div>div:nth-of-type(1) {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+
+        .filters>div:nth-of-type(1)>div:nth-of-type(1)>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(255, 126, 161);
+        }
+
+        .filters>div:nth-of-type(2)>div:nth-of-type(1)>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(74, 255, 158);
+        }
+
+
+        .filters>div:nth-of-type(3)>div:nth-of-type(1)>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(255, 237, 74);
+        }
+
+        .filters>div:nth-of-type(4)>div:nth-of-type(1)>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(191, 191, 191);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .addfilter {
+            color: rgb(220, 218, 218) !important;
+        }
+
+        .filters>div>div:nth-of-type(2) {
+            color: rgb(121, 121, 121);
+        }
+
+
+        .scheduledtasks {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 30px;
+            text-transform: capitalize;
+            color: rgb(121, 121, 121);
+        }
+
+        .scheduledtasks>div:nth-of-type(1) {
+            margin-left: 10px;
+        }
+
+        .scheduledtasks>div:nth-of-type(2) {
+            margin-left: 60px;
+        }
+
+        .settings {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 40px;
+            text-transform: capitalize;
+            color: rgb(121, 121, 121);
+        }
+
+        .settings>div:nth-of-type(1) {
+            margin-left: 10px;
+        }
+
+        .settings>div:nth-of-type(2) {
+            margin-left: 60px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .rightside {
+            width: 75%;
+            height: 100%;
+            padding: 0px 80px;
+            overflow-y: scroll;
+        }
+
+        .taskcontainer {
+            width: 100%;
+            height: 90%;
+        }
+
+
+
+        #taskcreate {
+            width: 100%;
+            height: 50px;
+            border-radius: 20px;
+            background-color: white;
+            margin-top: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #taskcreate>div:nth-of-type(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            height: 100%;
+        }
+
+        #taskcreate>div:nth-of-type(1)>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0px 5px;
+            cursor: pointer;
+        }
+
+        #taskcreate>div:nth-of-type(1)>div:nth-of-type(1) {
+            background-color: rgb(255, 126, 161);
+        }
+
+        #taskcreate>div:nth-of-type(1)>div:nth-of-type(2) {
+            background-color: rgb(74, 255, 158);
+        }
+
+        #taskcreate>div:nth-of-type(1)>div:nth-of-type(3) {
+            background-color: rgb(255, 237, 74);
+        }
+
+        #taskcreate>div:nth-of-type(2) {
+            width: 75%;
+            height: 100%;
+            background-color: gray;
+        }
+
+        #taskcreate>div:nth-of-type(2)>input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            text-transform: capitalize;
+            color: rgb(121, 121, 121);
+            font-family: myfont;
+        }
+
+        #taskcreate>div:nth-of-type(2)>input::placeholder {
+            color: rgb(220, 218, 218);
+        }
+
+        #taskcreate>div:nth-of-type(3) {
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #taskcreate>div:nth-of-type(3)>i {
+            font-size: 30px;
+            color: rgb(168, 169, 168);
+            cursor: pointer;
+        }
+
+        #tasks {
+            width: 100%;
+            min-height: 400px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .taskmain {
+            width: 80%;
+            height: 50px;
+            border-radius: 20px;
+            background-color: white;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .taskmain>.taskmain1 {
+            width: 5%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .taskmain>.taskmain1>div {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+        }
+
+        .taskmain>div:nth-of-type(2) {
+            color: rgb(121, 121, 121);
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-transform: capitalize;
+            outline: none;
+        }
+
+        .taskmain>div:nth-of-type(3) {
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: rgb(156, 249, 156);
+        }
+
+        .taskmain>div:nth-of-type(4) {
+            width: 10%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: rgb(251, 183, 183);
+        }
+
+        .taskmain>div:nth-of-type(3)>i,
+        .taskmain>div:nth-of-type(4)>i {
+            cursor: pointer;
+        }
+
+        .highlevel {
+            background-color: rgb(255, 126, 161) !important;
+        }
+
+        .midlevel {
+            background-color: rgb(74, 255, 158) !important;
+
+        }
+
+        .lowlevel {
+            background-color: rgb(255, 237, 74) !important;
+
+        }
+
+        .deleter {
+            display: none !important;
+        }
+
+        .checking {
+            color: rgb(112, 251, 112) !important;
+            text-decoration: line-through;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        .visibility {
+            visibility: hidden;
+            opacity: 0;
+            display: none !important;
+        }
+
+        .taskcontainer>div:nth-of-type(1){
+            display: flex;
+            justify-content: space-between;
+            text-transform: capitalize;
+            color: white;
+            margin-top: 50px;
+        }
